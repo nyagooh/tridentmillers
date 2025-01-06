@@ -74,6 +74,62 @@ slider.addEventListener('mouseleave', () => {
     slideInterval = setInterval(nextSlide, 5000);
 });
 
+// Image Slider Functionality
+const images = document.querySelectorAll('.slide-image');
+const dotsContainer = document.querySelector('.slide-dots');
+const prevButton = document.querySelector('.prev-slide');
+const nextButton = document.querySelector('.next-slide');
+let currentImage = 0;
+
+// Create dots
+images.forEach((_, index) => {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    if (index === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goToImage(index));
+    dotsContainer.appendChild(dot);
+});
+
+function updateDots() {
+    document.querySelectorAll('.dot').forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentImage);
+    });
+}
+
+function goToImage(index) {
+    images[currentImage].classList.remove('active');
+    currentImage = index;
+    images[currentImage].classList.add('active');
+    updateDots();
+}
+
+function nextImage() {
+    const next = (currentImage + 1) % images.length;
+    goToImage(next);
+}
+
+function prevImage() {
+    const prev = (currentImage - 1 + images.length) % images.length;
+    goToImage(prev);
+}
+
+// Event listeners
+prevButton.addEventListener('click', prevImage);
+nextButton.addEventListener('click', nextImage);
+
+// Auto advance images
+let slideInterval = setInterval(nextImage, 5000);
+
+// Pause auto-advance on hover
+const imageSlider = document.querySelector('.image-slider');
+imageSlider.addEventListener('mouseenter', () => {
+    clearInterval(slideInterval);
+});
+
+imageSlider.addEventListener('mouseleave', () => {
+    slideInterval = setInterval(nextImage, 5000);
+});
+
 // Mobile Menu Toggle
 const mobileMenu = document.querySelector('.mobile-menu');
 const navLinks = document.querySelector('.nav-links');
