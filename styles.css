@@ -248,6 +248,7 @@ body {
     letter-spacing: 1px;
     transition: all 0.3s ease;
     font-size: 0.9rem;
+    text-decoration: none;
 }
 
 .btn-primary {
@@ -599,6 +600,7 @@ body {
 .product-card:hover .product-overlay {
     opacity: 1;
 }
+
 
 .view-details {
     color: var(--white);
