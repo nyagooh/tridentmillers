@@ -7,8 +7,8 @@ AOS.init({
 
 
 // Mobile Menu Toggle
-const mobileMenu = document.querySelector('.mobile-menu');
-const navLinks = document.querySelector('.nav-links');
+const mobileMenu = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.mobile-menu');
 const header = document.querySelector('.header');
 
 mobileMenu.addEventListener('click', () => {
