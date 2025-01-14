@@ -170,7 +170,7 @@ body {
     border-radius: 8px;
     box-shadow: -2px 0 5px rgba(0,0,0,0.1);
     z-index: 1000;
-   
+    
 }
 
 .mobile-menu.active {
@@ -185,10 +185,11 @@ body {
     color: var(--primary-color); /* Adjust color as needed */
     font-size: 1.1rem;
     border-bottom: 1px solid #eee; /* Optional: adds a separator between items */
+
 }
 
 .mobile-menu a:hover {
-    color: var(--secondary-color);
+    background-color: var(--secondary-color);
 }
 
 /* Hero Section */
