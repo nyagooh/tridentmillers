@@ -144,6 +144,44 @@ body {
 .nav-links a:hover::after {
     width: 100%;
 }
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu :active {
+    display: block;
+    padding: 10px 0;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.mobile-menu :active:hover {
+    color: var(--secondary-color);
+}
 
 /* Hero Section */
 .hero {
@@ -866,8 +904,8 @@ body {
         display: none;
     }
     
-    .mobile-menu {
-        display: block;
+    .hamburger {
+        display: flex;
     }
     
     .contact-grid {
