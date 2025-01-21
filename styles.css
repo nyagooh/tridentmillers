@@ -1028,6 +1028,20 @@ body {
     background: #e68a00;
 }
 
+/* Contact section link styles */
+.info-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.info-item a:hover {
+    color: var(--secondary-color);
+}
+
+.info-item p {
+    margin: 5px 0;
+}
+
 /* Footer */
 .footer {
     background: var(--primary-color);
