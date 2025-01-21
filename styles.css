@@ -861,15 +861,6 @@ body {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 480px) {
-    .distributor-btn {
-        width: auto;
-        padding: 0.5rem 1.8rem;
-        font-size: 0.85rem;
-        position: static;
-        margin-left: 100px;
-    }
-}
 
 /* CTA Section */
 .cta-section {
@@ -1179,17 +1170,12 @@ body {
         gap: 1.2rem;
     }
 
-    .btn-distributor {
-        width: calc(100% - 32px);
-        padding: 0.9rem 1.8rem;
-        font-size: 0.85rem;
-        bottom: 16px;
-    }
+
 }
 
 /* About Section */
 .about {
-    padding: 100px 0;
+    padding: 50px 0;
     background: var(--gray);
 }
 
@@ -1404,14 +1390,6 @@ body {
     .about-text {
         padding-left: 0;
         text-align: center;
-    }
-
-    .about-features {
-        justify-content: center;
-    }
-
-    .about-feature {
-        justify-content: center;
     }
 
     .section-header h2 {
@@ -1732,9 +1710,10 @@ body {
 
 @media (max-width: 480px) {
     .distributor-btn {
-        width: calc(100% - 32px);
-        padding: 0.9rem 1.8rem;
+        width: auto;
+        padding: 0.5rem 1.8rem;
         font-size: 0.85rem;
-        bottom: 16px;
+        position: static;
+        margin-left: 100px;
     }
 }
