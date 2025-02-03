@@ -31,13 +31,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Header Background on Scroll
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
+const images = document.querySelectorAll(".image-slider img");
+let currentIndex = 0;
+
+function changeImage() {
+    images[currentIndex].classList.remove("active"); // Hide current image
+    currentIndex = (currentIndex + 1) % images.length; // Move to next image
+    images[currentIndex].classList.add("active"); // Show next image
+}
+
+setInterval(changeImage, 3000);
 
 // Active Navigation Link Highlight
 const sections = document.querySelectorAll('section');
