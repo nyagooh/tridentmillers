@@ -209,7 +209,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 3rem;
+    gap :10px
 }
 
 /* Hero Text Styling */
@@ -302,7 +302,7 @@ body {
 
 /* Hero Image Section */
 .hero-image {
-    flex: 1.5; /* Increased flex value for image */
+    /* flex: 15; Increased flex value for image */
     position: relative;
     max-width: 800px; /* Increased max-width */
     height: auto;
