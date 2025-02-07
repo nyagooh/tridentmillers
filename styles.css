@@ -299,18 +299,25 @@ body {
     background: var(--white);
     color: var(--primary-color);
 }
+.image-slider img {
+    display: none; /* Hide all images by default */
+}
+
+.image-slider img.active {
+    display: block; /* Show only the active image */
+}
 
 /* Hero Image Section */
 .hero-image {
     /* flex: 15; Increased flex value for image */
     position: relative;
     max-width: 800px; /* Increased max-width */
-    height: auto;
+    height: auto; 
 }
 .hero-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the container */
+    object-fit: contain; /* Ensures the image covers the container */
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
